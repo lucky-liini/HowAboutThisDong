@@ -1,9 +1,14 @@
-import "@assets/styles/App.css";
-import { RouterProvider } from "react-router-dom";
-import { router } from "./router";
+import '@assets/styles/App.css';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router';
+import { UserProvider } from './features/auth/context/UserContext';
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <UserProvider>
+      <RouterProvider router={router} />
+    </UserProvider>
+  );
 }
 
 export default App;
