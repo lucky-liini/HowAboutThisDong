@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-type Props = {}
+type Props = {};
 
 const Button = (props: Props) => {
-  return (
-    <div>Button</div>
-  )
-}
+  return <div>Button</div>;
+};

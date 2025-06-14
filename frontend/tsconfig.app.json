@@ -20,7 +20,6 @@
       "@assets/*": ["src/assets/*"],
       "@layouts/*": ["src/layouts/*"],
       "@routes/*": ["src/routes/*"]
-      
     },
 
     /* Bundler mode */

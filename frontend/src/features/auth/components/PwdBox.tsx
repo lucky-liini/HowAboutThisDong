@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-type Props = {}
+type Props = {};
 
 const PwdBox = (props: Props) => {
-  return (
-    <div>PwdBox</div>
-  )
-}
+  return <div>PwdBox</div>;
+};

@@ -1,9 +1,12 @@
-import React from 'react'
-
-type Props = {}
+import React from "react";
+import { Outlet } from "react-router-dom";
+type Props = {};
 
 export default function PostPage({}: Props) {
   return (
-    <div>PostPage</div>
-  )
+    <>
+      <div>PostPage</div>
+      <Outlet />
+    </>
+  );
 }

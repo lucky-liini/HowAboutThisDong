@@ -1,18 +1,9 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import '@assets/styles/App.css'
-import AppHeader from './layouts/AppHeader'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-
-const queryClient = new QueryClient();
+import "@assets/styles/App.css";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./router";
 
 function App() {
-  return(
-    <QueryClientProvider client={queryClient}>
-      <AppHeader/>
-    </QueryClientProvider>
-  );
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;

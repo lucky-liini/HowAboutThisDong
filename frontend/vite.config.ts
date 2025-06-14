@@ -1,6 +1,6 @@
-import { fileURLToPath, URL } from 'node:url'
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { fileURLToPath, URL } from 'node:url';
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -17,7 +17,7 @@ export default defineConfig({
       '@types': fileURLToPath(new URL('./src/shared/types', import.meta.url)),
       '@assets': fileURLToPath(new URL('./src/assets', import.meta.url)),
       '@layouts': fileURLToPath(new URL('./src/layouts', import.meta.url)),
-      '@routes': fileURLToPath(new URL('./src/routes', import.meta.url))
-    }
+      '@routes': fileURLToPath(new URL('./src/routes', import.meta.url)),
+    },
   },
-})
+});
