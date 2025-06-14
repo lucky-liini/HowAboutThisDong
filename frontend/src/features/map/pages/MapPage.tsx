@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-type Props = {}
+type Props = {};
 
 export default function MapPage({}: Props) {
-  return (
-    <div>MapPage</div>
-  )
+  return <div>MapPage</div>;
 }

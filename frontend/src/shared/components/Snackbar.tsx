@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-type Props = {}
+type Props = {};
 
 const Snackbar = (props: Props) => {
-  return (
-    <div>Snackbar</div>
-  )
-}
+  return <div>Snackbar</div>;
+};

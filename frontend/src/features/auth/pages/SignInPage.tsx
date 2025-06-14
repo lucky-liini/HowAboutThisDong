@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-type Props = {}
+type Props = {};
 
 export default function SignInPage({}: Props) {
-  return (
-    <div>SignInPage</div>
-  )
+  return <div>SignInPage</div>;
 }
