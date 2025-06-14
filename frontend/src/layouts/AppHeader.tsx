@@ -1,5 +1,5 @@
 import logo_path from '../../assets/로고.png'
-import { loginAndGetJWT, logoutFromBE } from '../../api/axios-auth';
+import { loginAndGetJWT, logoutFromBE } from '../api/axios-auth';
 import { useRef, useState } from 'react';
 type Props = {
 };
