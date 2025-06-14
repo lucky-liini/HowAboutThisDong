@@ -1,4 +1,4 @@
-import logo_path from '../../assets/로고.png'
+import logo_path from '@/assets/로고.png'
 import { loginAndGetJWT, logoutFromBE } from '../api/axios-auth';
 import { useRef, useState } from 'react';
 type Props = {
@@ -23,8 +23,8 @@ const AppHeader: React.FC<Props> = () => {
 
     async function Logout() {
         const response = await logoutFromBE(refreshToken.current);
-        console.log(response.data)
-        setIsLoggedIn(!isLoggedIn);
+        // setIsLoggedIn(!isLoggedIn);
+        localStorage.removeItem("user");
     }
 
     function LoginButton() {

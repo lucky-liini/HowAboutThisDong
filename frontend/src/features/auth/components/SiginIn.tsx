@@ -1,7 +1,15 @@
-import React, { useState } from 'react'
+import React, { createContext, useState } from 'react'
 import { loginAndGetJWT, logoutFromBE } from '@/api/axios-auth'
 
 type Props = {}
+
+type UserInfo = {
+  id: string,
+  accessToken: string,
+  refreshToken: string
+}
+
+const UserContext = createContext<UserInfo | undefined>(undefined);
 
 const InputId = ({value, onChange}: {value: string, onChange: (e: React.ChangeEvent<HTMLInputElement>) => void}) => {
   return (
@@ -44,9 +52,14 @@ const SignIn = () => {
   const handleLogin = async () => {
     try {
       const response = await loginAndGetJWT(id, password);
-      
+      const user : UserInfo = {
+        id: id,
+        accessToken: response.data.tokens.accessToken,
+        refreshToken: response.data.tokens.refreshToken
+      };
+      localStorage.setItem("user", JSON.stringify(user));
     } catch (error) {
-      
+      alert('id, pw를 확인해주세요');
     }
   }
 
